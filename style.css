@@ -1,0 +1,287 @@
+@import url("animation.css");
+
+:root {
+  /* color */
+  --bg-color: #d6d4c9;
+  --navy-color: #312b4e;
+  --yellow-color: #f49924;
+  --orange-color: #eb733a;
+  --purple-color: #776f91;
+  --skin-color: #e2bdb6;
+  --pink-color: #ea999a;
+  --white-color: #fff;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--bg-color);
+  /* animation: changeBg 1s forwards infinite; */
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--bg-color); */
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.play {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+/* doh */
+.doh {
+  font-family: grobold;
+  font-size: 10rem;
+  position: absolute;
+  top: 44%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: var(--navy-color);
+  opacity: 0;
+}
+.doh_d {
+  font-size: 12rem;
+  /* animation: dohD .8s forwards ease-in; */
+  transform-origin: 80%;
+}
+.doh_o {
+  /* animation: dohO .8s forwards ease-in; */
+}
+.doh_h {
+  font-size: 7.6rem;
+  /* animation: dohH .8s forwards ease-in; */
+  transform-origin: left;
+}
+.doh_iteration {
+  font-family: grobold;
+  font-size: 10rem;
+  position: absolute;
+  display: flex;
+  color: var(--purple-color);
+  opacity: 0;
+  z-index: 4;
+}
+
+/* boombox */
+.boombox_wrap {
+  position: relative;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  transform-origin: right bottom;
+}
+#boombox {
+  position: absolute;
+  top: -200%;
+  width: 200px;
+  right: 16%;
+  /* animation: dropBoombox 1s ease-in forwards; */
+
+  z-index: 2;
+}
+.boombox_body {
+  /* animation: boomboxClapFirst .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.boombox_bodySide {
+  /* animation: boomboxClapSecond .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.boombox_handle {
+  /* animation: boomboxClapThird .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.boombox_bodyCenter {
+  /* animation: boomboxClapFourth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.c1 {
+  /* animation: boomboxClapFifth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.c2 {
+  /* animation: boomboxClapSixth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.sq {
+  /* animation: boomboxClapSeventh .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.ssq1 {
+  /* animation: boomboxClapEighth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.ssq2 {
+  /* animation: boomboxClapNineth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.ssq3 {
+  /* animation: boomboxClapTenth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+.ssq4 {
+  /* animation: boomboxClapEleventh .6s 1s forwards; */
+  transform-origin: bottom;
+}
+#boombox_tri {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  /* transform: scale(0); */
+  opacity: 0;
+  /* transition: all .6s; */
+  /* animation: boomboxClapTwelfth .6s 1s forwards; */
+  transform-origin: bottom;
+  z-index: 1;
+}
+
+.boombox_rec {
+  /* animation: boomboxClapEighth .6s 1s forwards; */
+  transform-origin: bottom;
+}
+
+.boombox_shadow {
+  width: 200px;
+  height: 25px;
+  background: var(--navy-color);
+  border-radius: 150px / 20px;
+  top: 88.1%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  /* animation: boombox_shadow .4s .4s forwards ease-in; */
+}
+#smoke {
+  width: 300px;
+  fill: var(--white-color);
+  position: absolute;
+  top: 68%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.smokeL {
+  /* animation: smokeL 1.3s .6s forwards ease-out; */
+  opacity: 0;
+  transform-origin: 67%;
+}
+.smokeR {
+  opacity: 0;
+  /* animation: smokeR 1.3s .6s forwards ease-out; */
+}
+#smoke_back {
+  width: 400px;
+  top: 74.1%;
+  left: 19%;
+  opacity: 0;
+  transform-origin: bottom;
+  position: absolute;
+  fill: var(--white-color);
+  /* animation: smokeB .4s .6s forwards ease-in-out; */
+}
+.smoke_line {
+  stroke-width: 3px;
+  stroke: var(--navy-color);
+  /* animation: smokeLine 2s .6s infinite ease-in-out; */
+  transform-origin: right;
+}
+.smokeBack {
+  position: absolute;
+  /* animation: smokeBackMove 2s .6s infinite ease-in-out; */
+}
+#soundWave {
+  fill: none;
+  stroke: var(--white-color);
+  width: 200px;
+  stroke-width: 3px;
+  position: absolute;
+  bottom: 19%;
+  right: 51%;
+  z-index: 4;
+  transform: scale(0);
+  transform-origin: right bottom;
+  /* animation: soundWave .8s .6s forwards ease-in-out; */
+}
+
+/* aow */
+.text_center {
+  font-family: grobold;
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.aow {
+  font-family: grobold;
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  color: var(--navy-color);
+  z-index: 2;
+  visibility: hidden;
+  /* animation: zoomIn 2s forwards ease-in; */
+  transform-origin: center;
+}
+
+/* lyrics_Start */
+.icecold {
+  width: 100%;
+}
+.this_hit {
+  display: flex;
+  font-size: 6rem;
+  justify-content: center;
+}
+.this,
+.hit {
+  margin-right: 66px;
+  top: -100%;
+}
+.this {
+  animation: dropdown 0.3s forwards;
+}
+.hit {
+  animation: dropdown 0.3s 0.3s forwards;
+}
+.that {
+  animation: dropdown 0.3s 0.6s forwards;
+}
+.icecold {
+}
+
+/* bg_layer */
+/* 
+.bg_layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  transform-origin: center;
+  z-index: 1;
+  animation: bgChange 1s forwards infinite;
+} */
